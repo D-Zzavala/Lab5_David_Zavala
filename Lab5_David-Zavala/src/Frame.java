@@ -1,9 +1,17 @@
+
+import java.util.ArrayList;
+import java.util.Random;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.DefaultListModel;
+import javax.swing.JOptionPane;
+import javax.swing.tree.DefaultMutableTreeNode;
+import javax.swing.tree.DefaultTreeModel;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author 50431
@@ -15,6 +23,7 @@ public class Frame extends javax.swing.JFrame {
      */
     public Frame() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -27,11 +36,166 @@ public class Frame extends javax.swing.JFrame {
     private void initComponents() {
 
         Expediente = new javax.swing.JDialog();
+        jTabbedPane3 = new javax.swing.JTabbedPane();
+        Csrreras = new javax.swing.JPanel();
+        jScrollPane10 = new javax.swing.JScrollPane();
+        JL_Carreras = new javax.swing.JList<>();
+        jLabel52 = new javax.swing.JLabel();
+        Fondo13 = new javax.swing.JLabel();
+        Maestros = new javax.swing.JPanel();
+        jScrollPane11 = new javax.swing.JScrollPane();
+        JL_Clases = new javax.swing.JList<>();
+        jScrollPane12 = new javax.swing.JScrollPane();
+        JL_Maestros = new javax.swing.JList<>();
+        jLabel54 = new javax.swing.JLabel();
+        jLabel55 = new javax.swing.JLabel();
+        Fondo14 = new javax.swing.JLabel();
+        Estudiantes = new javax.swing.JPanel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel45 = new javax.swing.JLabel();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        JTr_Carrera = new javax.swing.JTree();
+        jScrollPane8 = new javax.swing.JScrollPane();
+        JL_Alumnos = new javax.swing.JList<>();
+        Fondo10 = new javax.swing.JLabel();
+        JB_Back = new javax.swing.JButton();
+        JB_Exit3 = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
         Fondo2 = new javax.swing.JLabel();
         Registro = new javax.swing.JDialog();
+        JB_Back2 = new javax.swing.JButton();
+        Exit1 = new javax.swing.JButton();
+        JB_Files = new javax.swing.JButton();
+        jTabbedPane1 = new javax.swing.JTabbedPane();
+        Carrera = new javax.swing.JPanel();
+        FTF_PrecioCar = new javax.swing.JFormattedTextField();
+        CB_NombreCar = new javax.swing.JComboBox<>();
+        TF_JefeCar = new javax.swing.JTextField();
+        JB_SaveCarrera = new javax.swing.JButton();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        Fondo5 = new javax.swing.JLabel();
+        Clase = new javax.swing.JPanel();
+        FTF_Edificio = new javax.swing.JFormattedTextField();
+        FTF_Seccion = new javax.swing.JFormattedTextField();
+        FTF_Salon = new javax.swing.JFormattedTextField();
+        TF_Nombrecla = new javax.swing.JTextField();
+        CheckAire = new javax.swing.JCheckBox();
+        JB_SaveClase = new javax.swing.JButton();
+        jLabel24 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
+        jLabel27 = new javax.swing.JLabel();
+        jLabel29 = new javax.swing.JLabel();
+        Fondo3 = new javax.swing.JLabel();
+        Estudiante = new javax.swing.JPanel();
+        CB_CarreraEst = new javax.swing.JComboBox<>();
+        RB_MEst = new javax.swing.JRadioButton();
+        RB_FEst = new javax.swing.JRadioButton();
+        TF_ApellidoEst = new javax.swing.JTextField();
+        TF_NombreEst = new javax.swing.JTextField();
+        FTF_Edad = new javax.swing.JFormattedTextField();
+        JB_SaveEstudiante = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        Fondo6 = new javax.swing.JLabel();
+        Maestro = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        JL_ClasesMA = new javax.swing.JList<>();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        JL_ClasesAvaila = new javax.swing.JList<>();
+        TF_ApellidoMae = new javax.swing.JTextField();
+        TF_NombreMae = new javax.swing.JTextField();
+        FTF_EdadMa = new javax.swing.JFormattedTextField();
+        FTF_SalarioMa2 = new javax.swing.JFormattedTextField();
+        JB_SaveMaestro = new javax.swing.JButton();
+        JB_AsignarClase = new javax.swing.JButton();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel30 = new javax.swing.JLabel();
+        Fondo4 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         Fondo1 = new javax.swing.JLabel();
+        Sexo = new javax.swing.ButtonGroup();
+        CarreraMod = new javax.swing.JDialog();
+        FTF_PrecioCarMod = new javax.swing.JFormattedTextField();
+        TF_JefeCarMod = new javax.swing.JTextField();
+        jButton13 = new javax.swing.JButton();
+        jLabel48 = new javax.swing.JLabel();
+        jLabel49 = new javax.swing.JLabel();
+        jLabel50 = new javax.swing.JLabel();
+        Fondo12 = new javax.swing.JLabel();
+        ClaseMod = new javax.swing.JDialog();
+        FTF_EdificioMod = new javax.swing.JFormattedTextField();
+        FTF_SeccionMod = new javax.swing.JFormattedTextField();
+        FTF_SalonMod = new javax.swing.JFormattedTextField();
+        TF_NombreclaMod = new javax.swing.JTextField();
+        CheckAireMod = new javax.swing.JCheckBox();
+        jButton12 = new javax.swing.JButton();
+        jLabel41 = new javax.swing.JLabel();
+        jLabel42 = new javax.swing.JLabel();
+        jLabel43 = new javax.swing.JLabel();
+        jLabel44 = new javax.swing.JLabel();
+        jLabel47 = new javax.swing.JLabel();
+        Fondo11 = new javax.swing.JLabel();
+        EstudianteMod = new javax.swing.JDialog();
+        CB_CarreraEstMod = new javax.swing.JComboBox<>();
+        RB_MEstMod = new javax.swing.JRadioButton();
+        RB_FEstMod = new javax.swing.JRadioButton();
+        TF_ApellidoEstMod = new javax.swing.JTextField();
+        TF_NombreEstMod = new javax.swing.JTextField();
+        FTF_EdadEstMod = new javax.swing.JFormattedTextField();
+        jButton10 = new javax.swing.JButton();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel37 = new javax.swing.JLabel();
+        jLabel38 = new javax.swing.JLabel();
+        jLabel39 = new javax.swing.JLabel();
+        jLabel40 = new javax.swing.JLabel();
+        Fondo9 = new javax.swing.JLabel();
+        MaestroMod = new javax.swing.JDialog();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        JL_ClasesMAMod = new javax.swing.JList<>();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        JL_ClasesAvailaMod = new javax.swing.JList<>();
+        TF_ApellidoMaeMod = new javax.swing.JTextField();
+        TF_NombreMaeMod = new javax.swing.JTextField();
+        FTF_EdadMaMod = new javax.swing.JFormattedTextField();
+        FTF_SalarioMaMod = new javax.swing.JFormattedTextField();
+        jButton8 = new javax.swing.JButton();
+        jButton9 = new javax.swing.JButton();
+        jLabel28 = new javax.swing.JLabel();
+        jLabel31 = new javax.swing.JLabel();
+        jLabel32 = new javax.swing.JLabel();
+        jLabel33 = new javax.swing.JLabel();
+        jLabel34 = new javax.swing.JLabel();
+        jLabel35 = new javax.swing.JLabel();
+        jLabel36 = new javax.swing.JLabel();
+        Fondo7 = new javax.swing.JLabel();
+        PUM_2Tree = new javax.swing.JPopupMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        EditEdu = new javax.swing.JMenuItem();
+        DeleteEdu = new javax.swing.JMenuItem();
+        PUM_EditEst = new javax.swing.JPopupMenu();
+        editest = new javax.swing.JMenuItem();
+        eliminarest = new javax.swing.JMenuItem();
+        PUM_EditMae = new javax.swing.JPopupMenu();
+        editmae = new javax.swing.JMenuItem();
+        eliminarmae = new javax.swing.JMenuItem();
+        PUM_EditCla = new javax.swing.JPopupMenu();
+        editcla = new javax.swing.JMenuItem();
+        eliminarcla = new javax.swing.JMenuItem();
+        PUM_EditCar = new javax.swing.JPopupMenu();
+        editcla1 = new javax.swing.JMenuItem();
+        eliminarcla1 = new javax.swing.JMenuItem();
         JB_Exit0 = new javax.swing.JButton();
         JB_Registro = new javax.swing.JButton();
         JB_Expediente = new javax.swing.JButton();
@@ -40,25 +204,919 @@ public class Frame extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         Fondo = new javax.swing.JLabel();
 
+        Expediente.setUndecorated(true);
         Expediente.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jTabbedPane3.setBackground(new java.awt.Color(255, 51, 51));
+        jTabbedPane3.setForeground(new java.awt.Color(0, 0, 0));
+
+        Csrreras.setBackground(new java.awt.Color(255, 0, 51));
+        Csrreras.setForeground(new java.awt.Color(204, 204, 204));
+        Csrreras.setFont(new java.awt.Font("Courier New", 0, 18)); // NOI18N
+        Csrreras.setOpaque(false);
+        Csrreras.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        JL_Carreras.setBackground(new java.awt.Color(51, 51, 51));
+        JL_Carreras.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        JL_Carreras.setForeground(new java.awt.Color(204, 204, 204));
+        JL_Carreras.setModel( new DefaultListModel()
+        );
+        JL_Carreras.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                JL_CarrerasMouseClicked(evt);
+            }
+        });
+        jScrollPane10.setViewportView(JL_Carreras);
+
+        Csrreras.add(jScrollPane10, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 77, 280, 470));
+
+        jLabel52.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        jLabel52.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel52.setText("Carreras");
+        Csrreras.add(jLabel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, -1, -1));
+
+        Fondo13.setBackground(new java.awt.Color(51, 51, 51));
+        Fondo13.setForeground(new java.awt.Color(204, 204, 204));
+        Fondo13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Bluevector.jpg"))); // NOI18N
+        Fondo13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        Csrreras.add(Fondo13, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 590));
+
+        jTabbedPane3.addTab("Carreras", Csrreras);
+
+        Maestros.setBackground(new java.awt.Color(255, 0, 51));
+        Maestros.setForeground(new java.awt.Color(204, 204, 204));
+        Maestros.setFont(new java.awt.Font("Courier New", 0, 18)); // NOI18N
+        Maestros.setOpaque(false);
+        Maestros.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jScrollPane11.setBackground(new java.awt.Color(51, 51, 51));
+        jScrollPane11.setForeground(new java.awt.Color(204, 204, 204));
+
+        JL_Clases.setBackground(new java.awt.Color(51, 51, 51));
+        JL_Clases.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        JL_Clases.setForeground(new java.awt.Color(204, 204, 204));
+        JL_Clases.setModel( new DefaultListModel()
+        );
+        JL_Clases.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                JL_ClasesMouseClicked(evt);
+            }
+        });
+        jScrollPane11.setViewportView(JL_Clases);
+
+        Maestros.add(jScrollPane11, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 80, 280, 470));
+
+        JL_Maestros.setBackground(new java.awt.Color(51, 51, 51));
+        JL_Maestros.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        JL_Maestros.setForeground(new java.awt.Color(204, 204, 204));
+        JL_Maestros.setModel( new DefaultListModel()
+        );
+        JL_Maestros.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                JL_MaestrosMouseClicked(evt);
+            }
+        });
+        jScrollPane12.setViewportView(JL_Maestros);
+
+        Maestros.add(jScrollPane12, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 77, 280, 470));
+
+        jLabel54.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        jLabel54.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel54.setText("Maestros");
+        Maestros.add(jLabel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, -1, -1));
+
+        jLabel55.setBackground(new java.awt.Color(51, 51, 51));
+        jLabel55.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        jLabel55.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel55.setText("Clases");
+        Maestros.add(jLabel55, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 50, -1, -1));
+
+        Fondo14.setBackground(new java.awt.Color(51, 51, 51));
+        Fondo14.setForeground(new java.awt.Color(204, 204, 204));
+        Fondo14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Bluevector.jpg"))); // NOI18N
+        Fondo14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        Maestros.add(Fondo14, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 590));
+
+        jTabbedPane3.addTab("Clase y Docentes", Maestros);
+
+        Estudiantes.setBackground(new java.awt.Color(255, 0, 51));
+        Estudiantes.setForeground(new java.awt.Color(204, 204, 204));
+        Estudiantes.setFont(new java.awt.Font("Courier New", 0, 18)); // NOI18N
+        Estudiantes.setOpaque(false);
+        Estudiantes.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel12.setBackground(new java.awt.Color(51, 51, 51));
+        jLabel12.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel12.setText("Carreras");
+        Estudiantes.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 50, -1, -1));
+
+        jLabel45.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        jLabel45.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel45.setText("Alumnos");
+        Estudiantes.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, -1, -1));
+
+        jScrollPane5.setBackground(new java.awt.Color(51, 51, 51));
+        jScrollPane5.setForeground(new java.awt.Color(204, 204, 204));
+
+        JTr_Carrera.setBackground(new java.awt.Color(51, 51, 51));
+        JTr_Carrera.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        JTr_Carrera.setForeground(new java.awt.Color(204, 204, 204));
+        javax.swing.tree.DefaultMutableTreeNode treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("Carrera");
+        JTr_Carrera.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
+        JTr_Carrera.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                JTr_CarreraMouseClicked(evt);
+            }
+        });
+        jScrollPane5.setViewportView(JTr_Carrera);
+
+        Estudiantes.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 80, 320, 460));
+
+        jScrollPane8.setBackground(new java.awt.Color(51, 51, 51));
+        jScrollPane8.setForeground(new java.awt.Color(204, 204, 204));
+
+        JL_Alumnos.setBackground(new java.awt.Color(51, 51, 51));
+        JL_Alumnos.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        JL_Alumnos.setForeground(new java.awt.Color(204, 204, 204));
+        JL_Alumnos.setModel(new DefaultListModel());
+        JL_Alumnos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                JL_AlumnosMouseClicked(evt);
+            }
+        });
+        jScrollPane8.setViewportView(JL_Alumnos);
+
+        Estudiantes.add(jScrollPane8, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 77, 280, 470));
+
+        Fondo10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Bluevector.jpg"))); // NOI18N
+        Fondo10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        Estudiantes.add(Fondo10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 590));
+
+        jTabbedPane3.addTab("Estudiante", Estudiantes);
+
+        Expediente.getContentPane().add(jTabbedPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 790, 620));
+
+        JB_Back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Icons/Back.png"))); // NOI18N
+        JB_Back.setBorder(null);
+        JB_Back.setContentAreaFilled(false);
+        JB_Back.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JB_BackActionPerformed(evt);
+            }
+        });
+        Expediente.getContentPane().add(JB_Back, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 60, -1, 60));
+
+        JB_Exit3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Icons/Exit0.png"))); // NOI18N
+        JB_Exit3.setBorder(null);
+        JB_Exit3.setContentAreaFilled(false);
+        JB_Exit3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JB_Exit3ActionPerformed(evt);
+            }
+        });
+        Expediente.getContentPane().add(JB_Exit3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 0, -1, 60));
+
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/812441.png"))); // NOI18N
-        Expediente.getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 10, 280, 270));
+        Expediente.getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 400, 280, 270));
 
         Fondo2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Bluevector.jpg"))); // NOI18N
         Fondo2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         Expediente.getContentPane().add(Fondo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1160, 690));
 
+        Registro.setUndecorated(true);
         Registro.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        JB_Back2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Icons/Back.png"))); // NOI18N
+        JB_Back2.setBorder(null);
+        JB_Back2.setContentAreaFilled(false);
+        JB_Back2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JB_Back2ActionPerformed(evt);
+            }
+        });
+        Registro.getContentPane().add(JB_Back2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 60, -1, 60));
+
+        Exit1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Icons/Exit0.png"))); // NOI18N
+        Exit1.setBorder(null);
+        Exit1.setContentAreaFilled(false);
+        Exit1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Exit1ActionPerformed(evt);
+            }
+        });
+        Registro.getContentPane().add(Exit1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 0, -1, 60));
+
+        JB_Files.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Icons/Files.png"))); // NOI18N
+        JB_Files.setBorder(null);
+        JB_Files.setContentAreaFilled(false);
+        JB_Files.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JB_FilesActionPerformed(evt);
+            }
+        });
+        Registro.getContentPane().add(JB_Files, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 120, -1, 60));
+
+        jTabbedPane1.setBackground(new java.awt.Color(255, 0, 51));
+        jTabbedPane1.setForeground(new java.awt.Color(0, 0, 0));
+
+        Carrera.setBackground(new java.awt.Color(255, 0, 51));
+        Carrera.setForeground(new java.awt.Color(204, 204, 204));
+        Carrera.setFont(new java.awt.Font("Courier New", 0, 18)); // NOI18N
+        Carrera.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        FTF_PrecioCar.setBackground(new java.awt.Color(51, 51, 51));
+        FTF_PrecioCar.setForeground(new java.awt.Color(204, 204, 204));
+        FTF_PrecioCar.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter()));
+        Carrera.add(FTF_PrecioCar, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 270, 120, 40));
+
+        CB_NombreCar.setBackground(new java.awt.Color(51, 51, 51));
+        CB_NombreCar.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        CB_NombreCar.setForeground(new java.awt.Color(0, 0, 0));
+        CB_NombreCar.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Finanzas", "Derecho", "Administración de Empresas", "Diseño Gráfico", "Mercadotecnia", "Sistemas Computacionales", "Industrial y de Sistemas", "Mecatrónica", "Biomédica", "Energía", "Medicina y Cirugía", "Odontología", "Nutrición", "Terapia Física y Ocupacional" }));
+        Carrera.add(CB_NombreCar, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 50, 240, 40));
+
+        TF_JefeCar.setBackground(new java.awt.Color(51, 51, 51));
+        TF_JefeCar.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        TF_JefeCar.setForeground(new java.awt.Color(204, 204, 204));
+        Carrera.add(TF_JefeCar, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 270, 180, 40));
+
+        JB_SaveCarrera.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Icons/Save.png"))); // NOI18N
+        JB_SaveCarrera.setBorder(null);
+        JB_SaveCarrera.setContentAreaFilled(false);
+        JB_SaveCarrera.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JB_SaveCarreraActionPerformed(evt);
+            }
+        });
+        Carrera.add(JB_SaveCarrera, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 520, -1, 60));
+
+        jLabel13.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel13.setText("Precio");
+        Carrera.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 280, -1, -1));
+
+        jLabel15.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel15.setText("Carrera");
+        Carrera.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 290, -1, -1));
+
+        jLabel16.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel16.setText("Jefe de");
+        Carrera.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 260, -1, -1));
+
+        jLabel17.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel17.setText("Nombre");
+        Carrera.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 60, -1, 30));
+
+        Fondo5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Bluevector.jpg"))); // NOI18N
+        Fondo5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        Carrera.add(Fondo5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 590));
+
+        jTabbedPane1.addTab("Carrera", Carrera);
+
+        Clase.setBackground(new java.awt.Color(255, 0, 51));
+        Clase.setForeground(new java.awt.Color(204, 204, 204));
+        Clase.setFont(new java.awt.Font("Courier New", 0, 18)); // NOI18N
+        Clase.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        FTF_Edificio.setBackground(new java.awt.Color(51, 51, 51));
+        FTF_Edificio.setForeground(new java.awt.Color(204, 204, 204));
+        Clase.add(FTF_Edificio, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 250, 150, 30));
+
+        FTF_Seccion.setBackground(new java.awt.Color(51, 51, 51));
+        FTF_Seccion.setForeground(new java.awt.Color(204, 204, 204));
+        Clase.add(FTF_Seccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 60, 150, 30));
+
+        FTF_Salon.setBackground(new java.awt.Color(51, 51, 51));
+        FTF_Salon.setForeground(new java.awt.Color(204, 204, 204));
+        Clase.add(FTF_Salon, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 250, 150, 30));
+
+        TF_Nombrecla.setBackground(new java.awt.Color(51, 51, 51));
+        TF_Nombrecla.setForeground(new java.awt.Color(204, 204, 204));
+        Clase.add(TF_Nombrecla, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 50, 160, 30));
+
+        CheckAire.setBackground(new java.awt.Color(51, 51, 51));
+        CheckAire.setForeground(new java.awt.Color(255, 0, 0));
+        CheckAire.setBorder(null);
+        CheckAire.setContentAreaFilled(false);
+        Clase.add(CheckAire, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 410, 40, 40));
+
+        JB_SaveClase.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Icons/Save.png"))); // NOI18N
+        JB_SaveClase.setBorder(null);
+        JB_SaveClase.setContentAreaFilled(false);
+        JB_SaveClase.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JB_SaveClaseActionPerformed(evt);
+            }
+        });
+        Clase.add(JB_SaveClase, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 520, -1, 60));
+
+        jLabel24.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        jLabel24.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel24.setText("Aire Acondicionado");
+        Clase.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 420, -1, -1));
+
+        jLabel25.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        jLabel25.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel25.setText("Salon");
+        Clase.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 250, -1, -1));
+
+        jLabel26.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        jLabel26.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel26.setText("Seccion");
+        Clase.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 60, -1, -1));
+
+        jLabel27.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        jLabel27.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel27.setText("Edificio");
+        Clase.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 250, -1, -1));
+
+        jLabel29.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        jLabel29.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel29.setText("Nombre");
+        Clase.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 60, -1, -1));
+
+        Fondo3.setBackground(new java.awt.Color(51, 51, 51));
+        Fondo3.setForeground(new java.awt.Color(204, 204, 204));
+        Fondo3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Bluevector.jpg"))); // NOI18N
+        Fondo3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        Clase.add(Fondo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 590));
+
+        jTabbedPane1.addTab("Clase", Clase);
+
+        Estudiante.setBackground(new java.awt.Color(255, 0, 51));
+        Estudiante.setForeground(new java.awt.Color(204, 204, 204));
+        Estudiante.setFont(new java.awt.Font("Courier New", 0, 18)); // NOI18N
+        Estudiante.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        CB_CarreraEst.setBackground(new java.awt.Color(51, 51, 51));
+        CB_CarreraEst.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        CB_CarreraEst.setForeground(new java.awt.Color(0, 0, 0));
+        Estudiante.add(CB_CarreraEst, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 56, 170, 30));
+
+        RB_MEst.setBackground(new java.awt.Color(51, 51, 51));
+        Sexo.add(RB_MEst);
+        RB_MEst.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        RB_MEst.setForeground(new java.awt.Color(204, 204, 204));
+        RB_MEst.setText("M");
+        RB_MEst.setContentAreaFilled(false);
+        Estudiante.add(RB_MEst, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 270, -1, -1));
+
+        RB_FEst.setBackground(new java.awt.Color(51, 51, 51));
+        Sexo.add(RB_FEst);
+        RB_FEst.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        RB_FEst.setForeground(new java.awt.Color(204, 204, 204));
+        RB_FEst.setText("F");
+        RB_FEst.setContentAreaFilled(false);
+        Estudiante.add(RB_FEst, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 270, -1, -1));
+
+        TF_ApellidoEst.setBackground(new java.awt.Color(51, 51, 51));
+        TF_ApellidoEst.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        TF_ApellidoEst.setForeground(new java.awt.Color(204, 204, 204));
+        Estudiante.add(TF_ApellidoEst, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 270, 150, 30));
+
+        TF_NombreEst.setBackground(new java.awt.Color(51, 51, 51));
+        TF_NombreEst.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        TF_NombreEst.setForeground(new java.awt.Color(204, 204, 204));
+        Estudiante.add(TF_NombreEst, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 60, 150, 30));
+
+        FTF_Edad.setBackground(new java.awt.Color(51, 51, 51));
+        FTF_Edad.setForeground(new java.awt.Color(204, 204, 204));
+        FTF_Edad.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("##"))));
+        Estudiante.add(FTF_Edad, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 410, 60, 40));
+
+        JB_SaveEstudiante.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Icons/Save.png"))); // NOI18N
+        JB_SaveEstudiante.setBorder(null);
+        JB_SaveEstudiante.setContentAreaFilled(false);
+        JB_SaveEstudiante.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JB_SaveEstudianteActionPerformed(evt);
+            }
+        });
+        Estudiante.add(JB_SaveEstudiante, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 520, -1, 60));
+
+        jLabel1.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel1.setText("Sexo");
+        Estudiante.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 280, -1, -1));
+
+        jLabel9.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel9.setText("Edad");
+        Estudiante.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 420, -1, -1));
+
+        jLabel2.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel2.setText("Apellido");
+        Estudiante.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 270, -1, -1));
+
+        jLabel8.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel8.setText("Carrera");
+        Estudiante.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 60, -1, -1));
+
+        jLabel10.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel10.setText("Nombre");
+        Estudiante.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 60, -1, -1));
+
+        Fondo6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Bluevector.jpg"))); // NOI18N
+        Fondo6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        Estudiante.add(Fondo6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 590));
+
+        jTabbedPane1.addTab("Estudiante", Estudiante);
+
+        Maestro.setBackground(new java.awt.Color(255, 0, 51));
+        Maestro.setForeground(new java.awt.Color(204, 204, 204));
+        Maestro.setFont(new java.awt.Font("Courier New", 0, 18)); // NOI18N
+        Maestro.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jScrollPane2.setBackground(new java.awt.Color(51, 51, 51));
+        jScrollPane2.setForeground(new java.awt.Color(204, 204, 204));
+
+        JL_ClasesMA.setBackground(new java.awt.Color(51, 51, 51));
+        JL_ClasesMA.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        JL_ClasesMA.setForeground(new java.awt.Color(204, 204, 204));
+        JL_ClasesMA.setModel(new DefaultListModel()
+        );
+        jScrollPane2.setViewportView(JL_ClasesMA);
+
+        Maestro.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 230, 160, 260));
+
+        jScrollPane1.setBackground(new java.awt.Color(51, 51, 51));
+        jScrollPane1.setForeground(new java.awt.Color(204, 204, 204));
+
+        JL_ClasesAvaila.setBackground(new java.awt.Color(51, 51, 51));
+        JL_ClasesAvaila.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        JL_ClasesAvaila.setForeground(new java.awt.Color(204, 204, 204));
+        JL_ClasesAvaila.setModel(new DefaultListModel()
+        );
+        jScrollPane1.setViewportView(JL_ClasesAvaila);
+
+        Maestro.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 230, 160, 260));
+
+        TF_ApellidoMae.setBackground(new java.awt.Color(51, 51, 51));
+        TF_ApellidoMae.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        TF_ApellidoMae.setForeground(new java.awt.Color(204, 204, 204));
+        Maestro.add(TF_ApellidoMae, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 234, 140, 40));
+
+        TF_NombreMae.setBackground(new java.awt.Color(51, 51, 51));
+        TF_NombreMae.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        TF_NombreMae.setForeground(new java.awt.Color(204, 204, 204));
+        Maestro.add(TF_NombreMae, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 44, 140, 40));
+
+        FTF_EdadMa.setBackground(new java.awt.Color(51, 51, 51));
+        FTF_EdadMa.setForeground(new java.awt.Color(204, 204, 204));
+        FTF_EdadMa.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("##"))));
+        Maestro.add(FTF_EdadMa, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 50, 130, 30));
+
+        FTF_SalarioMa2.setBackground(new java.awt.Color(51, 51, 51));
+        FTF_SalarioMa2.setForeground(new java.awt.Color(204, 204, 204));
+        FTF_SalarioMa2.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#####"))));
+        Maestro.add(FTF_SalarioMa2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 410, 130, 30));
+
+        JB_SaveMaestro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Icons/Save.png"))); // NOI18N
+        JB_SaveMaestro.setBorder(null);
+        JB_SaveMaestro.setContentAreaFilled(false);
+        JB_SaveMaestro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JB_SaveMaestroActionPerformed(evt);
+            }
+        });
+        Maestro.add(JB_SaveMaestro, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 520, -1, 60));
+
+        JB_AsignarClase.setText("Asignar Clase");
+        JB_AsignarClase.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JB_AsignarClaseActionPerformed(evt);
+            }
+        });
+        Maestro.add(JB_AsignarClase, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 500, 110, 40));
+
+        jLabel18.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel18.setText("Salario");
+        Maestro.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 420, -1, -1));
+
+        jLabel19.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel19.setText("Apellido");
+        Maestro.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 250, -1, -1));
+
+        jLabel20.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel20.setText("Edad");
+        Maestro.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 60, -1, -1));
+
+        jLabel21.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        jLabel21.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel21.setText("Asignadas");
+        Maestro.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 200, -1, -1));
+
+        jLabel22.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        jLabel22.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel22.setText("Clases");
+        Maestro.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 170, -1, -1));
+
+        jLabel23.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        jLabel23.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel23.setText("Nombre");
+        Maestro.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 60, -1, -1));
+
+        jLabel30.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        jLabel30.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel30.setText("Disponibles");
+        Maestro.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 200, -1, -1));
+
+        Fondo4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Bluevector.jpg"))); // NOI18N
+        Fondo4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        Maestro.add(Fondo4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 590));
+
+        jTabbedPane1.addTab("Maestro", Maestro);
+
+        Registro.getContentPane().add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 790, 620));
+
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/812441.png"))); // NOI18N
-        Registro.getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 280, 270));
+        Registro.getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 410, -1, 270));
 
         Fondo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Bluevector.jpg"))); // NOI18N
         Fondo1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         Registro.getContentPane().add(Fondo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1160, 690));
 
+        CarreraMod.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        FTF_PrecioCarMod.setBackground(new java.awt.Color(51, 51, 51));
+        FTF_PrecioCarMod.setForeground(new java.awt.Color(204, 204, 204));
+        FTF_PrecioCarMod.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter()));
+        CarreraMod.getContentPane().add(FTF_PrecioCarMod, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 340, 120, 40));
+
+        TF_JefeCarMod.setBackground(new java.awt.Color(51, 51, 51));
+        TF_JefeCarMod.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        TF_JefeCarMod.setForeground(new java.awt.Color(204, 204, 204));
+        CarreraMod.getContentPane().add(TF_JefeCarMod, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 100, 180, 40));
+
+        jButton13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Icons/Save.png"))); // NOI18N
+        jButton13.setBorder(null);
+        jButton13.setContentAreaFilled(false);
+        jButton13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton13ActionPerformed(evt);
+            }
+        });
+        CarreraMod.getContentPane().add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 520, -1, 60));
+
+        jLabel48.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        jLabel48.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel48.setText("Precio");
+        CarreraMod.getContentPane().add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 350, -1, -1));
+
+        jLabel49.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        jLabel49.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel49.setText("Carrera");
+        CarreraMod.getContentPane().add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 120, -1, -1));
+
+        jLabel50.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        jLabel50.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel50.setText("Jefe de");
+        CarreraMod.getContentPane().add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 90, -1, -1));
+
+        Fondo12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Bluevector.jpg"))); // NOI18N
+        Fondo12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        CarreraMod.getContentPane().add(Fondo12, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 420, 590));
+
+        ClaseMod.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        FTF_EdificioMod.setBackground(new java.awt.Color(51, 51, 51));
+        FTF_EdificioMod.setForeground(new java.awt.Color(204, 204, 204));
+        ClaseMod.getContentPane().add(FTF_EdificioMod, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 330, 150, 30));
+
+        FTF_SeccionMod.setBackground(new java.awt.Color(51, 51, 51));
+        FTF_SeccionMod.setForeground(new java.awt.Color(204, 204, 204));
+        ClaseMod.getContentPane().add(FTF_SeccionMod, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 140, 150, 30));
+
+        FTF_SalonMod.setBackground(new java.awt.Color(51, 51, 51));
+        FTF_SalonMod.setForeground(new java.awt.Color(204, 204, 204));
+        ClaseMod.getContentPane().add(FTF_SalonMod, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 240, 150, 30));
+
+        TF_NombreclaMod.setBackground(new java.awt.Color(51, 51, 51));
+        TF_NombreclaMod.setForeground(new java.awt.Color(204, 204, 204));
+        ClaseMod.getContentPane().add(TF_NombreclaMod, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 60, 150, 30));
+
+        CheckAireMod.setBackground(new java.awt.Color(51, 51, 51));
+        CheckAireMod.setForeground(new java.awt.Color(255, 0, 0));
+        CheckAireMod.setBorder(null);
+        CheckAireMod.setContentAreaFilled(false);
+        ClaseMod.getContentPane().add(CheckAireMod, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 410, 40, 40));
+
+        jButton12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Icons/Save.png"))); // NOI18N
+        jButton12.setBorder(null);
+        jButton12.setContentAreaFilled(false);
+        jButton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton12ActionPerformed(evt);
+            }
+        });
+        ClaseMod.getContentPane().add(jButton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 520, -1, 60));
+
+        jLabel41.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        jLabel41.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel41.setText("Aire Acondicionado");
+        ClaseMod.getContentPane().add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 420, -1, -1));
+
+        jLabel42.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        jLabel42.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel42.setText("Salon");
+        ClaseMod.getContentPane().add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 250, -1, -1));
+
+        jLabel43.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        jLabel43.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel43.setText("Seccion");
+        ClaseMod.getContentPane().add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 150, -1, -1));
+
+        jLabel44.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        jLabel44.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel44.setText("Edificio");
+        ClaseMod.getContentPane().add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 340, -1, -1));
+
+        jLabel47.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        jLabel47.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel47.setText("Nombre");
+        ClaseMod.getContentPane().add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 60, -1, -1));
+
+        Fondo11.setBackground(new java.awt.Color(51, 51, 51));
+        Fondo11.setForeground(new java.awt.Color(204, 204, 204));
+        Fondo11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Bluevector.jpg"))); // NOI18N
+        Fondo11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        ClaseMod.getContentPane().add(Fondo11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 590));
+
+        EstudianteMod.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        CB_CarreraEstMod.setBackground(new java.awt.Color(51, 51, 51));
+        CB_CarreraEstMod.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        CB_CarreraEstMod.setForeground(new java.awt.Color(0, 0, 0));
+        EstudianteMod.getContentPane().add(CB_CarreraEstMod, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 150, 170, 30));
+
+        RB_MEstMod.setBackground(new java.awt.Color(51, 51, 51));
+        Sexo.add(RB_MEstMod);
+        RB_MEstMod.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        RB_MEstMod.setForeground(new java.awt.Color(204, 204, 204));
+        RB_MEstMod.setText("M");
+        RB_MEstMod.setContentAreaFilled(false);
+        EstudianteMod.getContentPane().add(RB_MEstMod, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 340, -1, -1));
+
+        RB_FEstMod.setBackground(new java.awt.Color(51, 51, 51));
+        Sexo.add(RB_FEstMod);
+        RB_FEstMod.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        RB_FEstMod.setForeground(new java.awt.Color(204, 204, 204));
+        RB_FEstMod.setText("F");
+        RB_FEstMod.setContentAreaFilled(false);
+        EstudianteMod.getContentPane().add(RB_FEstMod, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 340, -1, -1));
+
+        TF_ApellidoEstMod.setBackground(new java.awt.Color(51, 51, 51));
+        TF_ApellidoEstMod.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        TF_ApellidoEstMod.setForeground(new java.awt.Color(204, 204, 204));
+        TF_ApellidoEstMod.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TF_ApellidoEstModActionPerformed(evt);
+            }
+        });
+        EstudianteMod.getContentPane().add(TF_ApellidoEstMod, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 250, 150, 30));
+
+        TF_NombreEstMod.setBackground(new java.awt.Color(51, 51, 51));
+        TF_NombreEstMod.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        TF_NombreEstMod.setForeground(new java.awt.Color(204, 204, 204));
+        EstudianteMod.getContentPane().add(TF_NombreEstMod, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 50, 150, 30));
+
+        FTF_EdadEstMod.setBackground(new java.awt.Color(51, 51, 51));
+        FTF_EdadEstMod.setForeground(new java.awt.Color(204, 204, 204));
+        FTF_EdadEstMod.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("##"))));
+        EstudianteMod.getContentPane().add(FTF_EdadEstMod, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 410, 60, 40));
+
+        jButton10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Icons/Save.png"))); // NOI18N
+        jButton10.setBorder(null);
+        jButton10.setContentAreaFilled(false);
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
+        EstudianteMod.getContentPane().add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 520, -1, 60));
+
+        jLabel11.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel11.setText("Sexo");
+        EstudianteMod.getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 340, -1, -1));
+
+        jLabel37.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        jLabel37.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel37.setText("Edad");
+        EstudianteMod.getContentPane().add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 420, -1, -1));
+
+        jLabel38.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        jLabel38.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel38.setText("Apellido");
+        EstudianteMod.getContentPane().add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 260, -1, -1));
+
+        jLabel39.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        jLabel39.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel39.setText("Carrera");
+        EstudianteMod.getContentPane().add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, -1, -1));
+
+        jLabel40.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        jLabel40.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel40.setText("Nombre");
+        EstudianteMod.getContentPane().add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 60, -1, -1));
+
+        Fondo9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Bluevector.jpg"))); // NOI18N
+        Fondo9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        EstudianteMod.getContentPane().add(Fondo9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 390, 590));
+
+        MaestroMod.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jScrollPane3.setBackground(new java.awt.Color(51, 51, 51));
+        jScrollPane3.setForeground(new java.awt.Color(204, 204, 204));
+
+        JL_ClasesMAMod.setBackground(new java.awt.Color(51, 51, 51));
+        JL_ClasesMAMod.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        JL_ClasesMAMod.setForeground(new java.awt.Color(204, 204, 204));
+        JL_ClasesMAMod.setModel(new DefaultListModel()
+        );
+        jScrollPane3.setViewportView(JL_ClasesMAMod);
+
+        MaestroMod.getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 230, 160, 260));
+
+        jScrollPane4.setBackground(new java.awt.Color(51, 51, 51));
+        jScrollPane4.setForeground(new java.awt.Color(204, 204, 204));
+
+        JL_ClasesAvailaMod.setBackground(new java.awt.Color(51, 51, 51));
+        JL_ClasesAvailaMod.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        JL_ClasesAvailaMod.setForeground(new java.awt.Color(204, 204, 204));
+        JL_ClasesAvailaMod.setModel(new DefaultListModel()
+        );
+        jScrollPane4.setViewportView(JL_ClasesAvailaMod);
+
+        MaestroMod.getContentPane().add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 230, 160, 260));
+
+        TF_ApellidoMaeMod.setBackground(new java.awt.Color(51, 51, 51));
+        TF_ApellidoMaeMod.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        TF_ApellidoMaeMod.setForeground(new java.awt.Color(204, 204, 204));
+        MaestroMod.getContentPane().add(TF_ApellidoMaeMod, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 234, 140, 40));
+
+        TF_NombreMaeMod.setBackground(new java.awt.Color(51, 51, 51));
+        TF_NombreMaeMod.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        TF_NombreMaeMod.setForeground(new java.awt.Color(204, 204, 204));
+        MaestroMod.getContentPane().add(TF_NombreMaeMod, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 44, 140, 40));
+
+        FTF_EdadMaMod.setBackground(new java.awt.Color(51, 51, 51));
+        FTF_EdadMaMod.setForeground(new java.awt.Color(204, 204, 204));
+        FTF_EdadMaMod.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("##"))));
+        MaestroMod.getContentPane().add(FTF_EdadMaMod, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 50, 130, 30));
+
+        FTF_SalarioMaMod.setBackground(new java.awt.Color(51, 51, 51));
+        FTF_SalarioMaMod.setForeground(new java.awt.Color(204, 204, 204));
+        FTF_SalarioMaMod.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#####"))));
+        MaestroMod.getContentPane().add(FTF_SalarioMaMod, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 410, 130, 30));
+
+        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Icons/Save.png"))); // NOI18N
+        jButton8.setBorder(null);
+        jButton8.setContentAreaFilled(false);
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
+        MaestroMod.getContentPane().add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 520, -1, 60));
+
+        jButton9.setText("Asignar Clase");
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
+        MaestroMod.getContentPane().add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 500, 110, 40));
+
+        jLabel28.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        jLabel28.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel28.setText("Salario");
+        MaestroMod.getContentPane().add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 420, -1, -1));
+
+        jLabel31.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        jLabel31.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel31.setText("Apellido");
+        MaestroMod.getContentPane().add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 250, -1, -1));
+
+        jLabel32.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        jLabel32.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel32.setText("Edad");
+        MaestroMod.getContentPane().add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 60, -1, -1));
+
+        jLabel33.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        jLabel33.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel33.setText("Asignadas");
+        MaestroMod.getContentPane().add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 200, -1, -1));
+
+        jLabel34.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        jLabel34.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel34.setText("Clases");
+        MaestroMod.getContentPane().add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 170, -1, -1));
+
+        jLabel35.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        jLabel35.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel35.setText("Nombre");
+        MaestroMod.getContentPane().add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 60, -1, -1));
+
+        jLabel36.setFont(new java.awt.Font("Courier New", 1, 24)); // NOI18N
+        jLabel36.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel36.setText("Disponibles");
+        MaestroMod.getContentPane().add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 200, -1, -1));
+
+        Fondo7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Bluevector.jpg"))); // NOI18N
+        Fondo7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        MaestroMod.getContentPane().add(Fondo7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 590));
+
+        jMenuItem1.setText("Exportar");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        PUM_2Tree.add(jMenuItem1);
+
+        EditEdu.setText("Editar");
+        EditEdu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EditEduActionPerformed(evt);
+            }
+        });
+        PUM_2Tree.add(EditEdu);
+
+        DeleteEdu.setText("Eliminar");
+        PUM_2Tree.add(DeleteEdu);
+
+        editest.setText("Editar");
+        editest.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                editestActionPerformed(evt);
+            }
+        });
+        PUM_EditEst.add(editest);
+
+        eliminarest.setText("Eliminar");
+        PUM_EditEst.add(eliminarest);
+
+        editmae.setText("Editar");
+        editmae.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                editmaeActionPerformed(evt);
+            }
+        });
+        PUM_EditMae.add(editmae);
+
+        eliminarmae.setText("Eliminar");
+        eliminarmae.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                eliminarmaeActionPerformed(evt);
+            }
+        });
+        PUM_EditMae.add(eliminarmae);
+
+        editcla.setText("Editar");
+        editcla.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                editclaActionPerformed(evt);
+            }
+        });
+        PUM_EditCla.add(editcla);
+
+        eliminarcla.setText("Eliminar");
+        eliminarcla.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                eliminarclaActionPerformed(evt);
+            }
+        });
+        PUM_EditCla.add(eliminarcla);
+
+        editcla1.setText("Editar");
+        editcla1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                editcla1ActionPerformed(evt);
+            }
+        });
+        PUM_EditCar.add(editcla1);
+
+        eliminarcla1.setText("Eliminar");
+        eliminarcla1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                eliminarcla1ActionPerformed(evt);
+            }
+        });
+        PUM_EditCar.add(eliminarcla1);
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         JB_Exit0.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Icons/Exit0.png"))); // NOI18N
@@ -74,11 +1132,21 @@ public class Frame extends javax.swing.JFrame {
         JB_Registro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Icons/big New Person.png"))); // NOI18N
         JB_Registro.setBorder(null);
         JB_Registro.setContentAreaFilled(false);
+        JB_Registro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JB_RegistroActionPerformed(evt);
+            }
+        });
         getContentPane().add(JB_Registro, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 400, 330, 270));
 
         JB_Expediente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Icons/Big Files.png"))); // NOI18N
         JB_Expediente.setBorder(null);
         JB_Expediente.setContentAreaFilled(false);
+        JB_Expediente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JB_ExpedienteActionPerformed(evt);
+            }
+        });
         getContentPane().add(JB_Expediente, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 400, 330, 270));
 
         jLabel4.setFont(new java.awt.Font("Courier New", 1, 48)); // NOI18N
@@ -103,6 +1171,405 @@ public class Frame extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_JB_Exit0ActionPerformed
 
+    private void JB_RegistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JB_RegistroActionPerformed
+        Registro.pack();
+        Registro.setVisible(true);
+        Registro.setLocationRelativeTo(null);
+        this.setVisible(false);
+    }//GEN-LAST:event_JB_RegistroActionPerformed
+
+    private void JB_ExpedienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JB_ExpedienteActionPerformed
+        Expediente.pack();
+        Expediente.setVisible(true);
+        Expediente.setLocationRelativeTo(null);
+        this.setVisible(false);
+    }//GEN-LAST:event_JB_ExpedienteActionPerformed
+
+    private void Exit1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Exit1ActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_Exit1ActionPerformed
+
+    private void JB_Back2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JB_Back2ActionPerformed
+        this.pack();
+        this.setVisible(true);
+        this.setLocationRelativeTo(null);
+        Registro.setVisible(false);
+    }//GEN-LAST:event_JB_Back2ActionPerformed
+
+    private void JB_FilesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JB_FilesActionPerformed
+        Expediente.pack();
+        Expediente.setVisible(true);
+        Expediente.setLocationRelativeTo(null);
+        Registro.setVisible(false);
+    }//GEN-LAST:event_JB_FilesActionPerformed
+
+    private void JB_BackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JB_BackActionPerformed
+        this.pack();
+        this.setVisible(true);
+        this.setLocationRelativeTo(null);
+        Expediente.setVisible(false);
+    }//GEN-LAST:event_JB_BackActionPerformed
+
+    private void JB_Exit3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JB_Exit3ActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_JB_Exit3ActionPerformed
+
+    private void JB_SaveCarreraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JB_SaveCarreraActionPerformed
+        try {
+            DefaultComboBoxModel CBmod = (DefaultComboBoxModel) CB_CarreraEst.getModel();
+            DefaultComboBoxModel CBmod2 = (DefaultComboBoxModel) CB_CarreraEstMod.getModel();
+            String Facultad;
+            if (CB_NombreCar.getSelectedItem().toString().equals("Finanzas") || CB_NombreCar.getSelectedItem().toString().equals("Derecho") || CB_NombreCar.getSelectedItem().toString().equals("Administación de Empresas") || CB_NombreCar.getSelectedItem().toString().equals("Diseño Gráfico") || CB_NombreCar.getSelectedItem().toString().equals("Mercadotecnia")) {
+                Facultad = "Licenciatura";
+                CBmod.addElement((Licentura) new Licentura(Facultad, CB_NombreCar.getSelectedItem().toString(), Integer.parseInt(FTF_PrecioCar.getText()), TF_JefeCar.getText()));
+                CBmod2.addElement((Licentura) new Licentura(Facultad, CB_NombreCar.getSelectedItem().toString(), Integer.parseInt(FTF_PrecioCar.getText()), TF_JefeCar.getText()));
+            } else if (CB_NombreCar.getSelectedItem().toString().equals("Sistemas Computacionales") || CB_NombreCar.getSelectedItem().toString().equals("Industrial y de Sisteas") || CB_NombreCar.getSelectedItem().toString().equals("Mecatrónica") || CB_NombreCar.getSelectedItem().toString().equals("Biomédica") || CB_NombreCar.getSelectedItem().toString().equals("Energía")) {
+                Facultad = "Ingeniera";
+                CBmod.addElement((Ingenieria) new Ingenieria(CB_NombreCar.getSelectedItem().toString(), Facultad, Integer.parseInt(FTF_PrecioCar.getText()), TF_JefeCar.getText()));
+                CBmod2.addElement((Ingenieria) new Ingenieria(CB_NombreCar.getSelectedItem().toString(), Facultad, Integer.parseInt(FTF_PrecioCar.getText()), TF_JefeCar.getText()));
+            } else if (CB_NombreCar.getSelectedItem().toString().equals("Medicina y Cirugía") || CB_NombreCar.getSelectedItem().toString().equals("Odontología") || CB_NombreCar.getSelectedItem().toString().equals("Nutrición") || CB_NombreCar.getSelectedItem().toString().equals("Terapia Física y Ocupacional")) {
+                Facultad = "Ciencias de la salud";
+                CBmod.addElement((CCSS) new CCSS(CB_NombreCar.getSelectedItem().toString(), Facultad, Integer.parseInt(FTF_PrecioCar.getText()), TF_JefeCar.getText()));
+                CBmod2.addElement((CCSS) new CCSS(CB_NombreCar.getSelectedItem().toString(), Facultad, Integer.parseInt(FTF_PrecioCar.getText()), TF_JefeCar.getText()));
+            }
+            CB_NombreCar.setSelectedIndex(0);
+            FTF_PrecioCar.setText("");
+            TF_JefeCar.setText("");
+            JOptionPane.showMessageDialog(null, "Agregado Exitoso");
+        } catch (Exception e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Algo Ha Salido Mal");
+        }
+    }//GEN-LAST:event_JB_SaveCarreraActionPerformed
+
+    private void JB_SaveClaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JB_SaveClaseActionPerformed
+        try {
+            DefaultListModel Listmod = (DefaultListModel) JL_Clases.getModel();
+            DefaultListModel Listmod2 = (DefaultListModel) JL_ClasesAvaila.getModel();
+            DefaultListModel Listmod3 = (DefaultListModel) JL_ClasesAvailaMod.getModel();
+            if (CheckAire.isSelected()) {
+                Listmod.addElement((Clase) new Clase(TF_Nombrecla.getText(), Integer.parseInt(FTF_Seccion.getText()), Integer.parseInt(FTF_Edificio.getText()), true));
+                Listmod2.addElement((Clase) new Clase(TF_Nombrecla.getText(), Integer.parseInt(FTF_Seccion.getText()), Integer.parseInt(FTF_Edificio.getText()), true));
+                Listmod3.addElement((Clase) new Clase(TF_Nombrecla.getText(), Integer.parseInt(FTF_Seccion.getText()), Integer.parseInt(FTF_Edificio.getText()), true));
+                JL_Clases.setModel(Listmod);
+                JL_ClasesAvaila.setModel(Listmod2);
+            } else if (!CheckAire.isSelected()) {
+                Listmod.addElement((Clase) new Clase(TF_Nombrecla.getText(), Integer.parseInt(FTF_Seccion.getText()), Integer.parseInt(FTF_Edificio.getText()), false));
+                Listmod2.addElement((Clase) new Clase(TF_Nombrecla.getText(), Integer.parseInt(FTF_Seccion.getText()), Integer.parseInt(FTF_Edificio.getText()), false));
+                Listmod3.addElement((Clase) new Clase(TF_Nombrecla.getText(), Integer.parseInt(FTF_Seccion.getText()), Integer.parseInt(FTF_Edificio.getText()), false));
+                JL_Clases.setModel(Listmod);
+                JL_ClasesAvaila.setModel(Listmod2);
+                JL_ClasesAvailaMod.setModel(Listmod3);
+            }
+            TF_Nombrecla.setText("");
+            FTF_Seccion.setText("");
+            FTF_Edificio.setText("");
+            CheckAire.setSelected(false);
+            JOptionPane.showMessageDialog(null, "Agregado Exitoso");
+        } catch (Exception e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Algo Ha Salido Mal");
+        }
+    }//GEN-LAST:event_JB_SaveClaseActionPerformed
+
+    private void JB_SaveMaestroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JB_SaveMaestroActionPerformed
+        try {
+            DefaultListModel listmod = (DefaultListModel) JL_Maestros.getModel();
+            ArrayList Temp = new ArrayList();
+            for (int i = 0; i < JL_ClasesMA.getComponentCount(); i++) {
+                Temp.add(JL_ClasesMA.getComponent(i));
+            }
+            listmod.addElement((Maestro) new Maestro(TF_NombreMae.getText(), TF_NombreMae.getText(), Integer.parseInt(FTF_SalarioMa2.getText().toString()), Integer.parseInt(FTF_Salon.getText().toString()), Temp));
+            JOptionPane.showMessageDialog(null, "Agregado Exitoso");
+        } catch (Exception e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Algo Ha Salido Mal");
+        }
+    }//GEN-LAST:event_JB_SaveMaestroActionPerformed
+
+    private void JB_AsignarClaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JB_AsignarClaseActionPerformed
+        try {
+            DefaultListModel ClasesA = (DefaultListModel) JL_ClasesAvaila.getModel();
+            DefaultListModel ClasesM = (DefaultListModel) JL_ClasesMA.getModel();
+            if (JL_ClasesAvaila.getSelectedIndex() < 0) {
+                JOptionPane.showMessageDialog(null, "Elija una Clase");
+            } else {
+                ClasesM.addElement((Clase) ClasesA.get(JL_ClasesAvaila.getSelectedIndex()));
+                ClasesA.remove(JL_ClasesAvaila.getSelectedIndex());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Algo Ha Salido Mal");
+        }
+
+    }//GEN-LAST:event_JB_AsignarClaseActionPerformed
+
+    private void JB_SaveEstudianteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JB_SaveEstudianteActionPerformed
+        try {
+            DefaultListModel list = (DefaultListModel) JL_Alumnos.getModel();
+            if (RB_FEst.isSelected()) {
+                Random rn = new Random();
+                int cuenta = 12000000 + rn.nextInt(111111);
+                list.addElement((Estudiante) new Estudiante(TF_NombreEst.getText(), TF_ApellidoEst.getText(), cuenta, Integer.parseInt(FTF_Edad.getText()), "Masculino", (Carrera) CB_CarreraEst.getSelectedItem()));
+                JOptionPane.showMessageDialog(null, "Adicion Exitosa");
+            } else if (RB_MEst.isSelected()) {
+                Random rn = new Random();
+                int cuenta = 12000000 + rn.nextInt(999999);
+                list.addElement((Estudiante) new Estudiante(TF_NombreEst.getText(), TF_ApellidoEst.getText(), cuenta, Integer.parseInt(FTF_Edad.getText()), "Masculino", (Carrera) CB_CarreraEst.getSelectedItem()));
+                JOptionPane.showMessageDialog(null, "Agregado Exitoso");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Algo Ha Salido Mal");
+        }
+    }//GEN-LAST:event_JB_SaveEstudianteActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        try {
+            DefaultListModel listmod = (DefaultListModel) JL_Maestros.getModel();
+            ArrayList Temp = new ArrayList();
+            for (int i = 0; i < JL_ClasesMA.getComponentCount(); i++) {
+                Temp.add(JL_ClasesMAMod.getComponent(i));
+            }
+            Maestro temp = new Maestro(TF_NombreMaeMod.getText(), TF_ApellidoMaeMod.getText(), Integer.parseInt(FTF_SalarioMaMod.getText().toString()), Integer.parseInt(FTF_Salon.getText().toString()), Temp);
+            listmod.set(JL_Maestros.getSelectedIndex(), temp);
+            JOptionPane.showMessageDialog(null, "Modificado Exitoso");
+        } catch (Exception e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Algo Ha Salido Mal");
+        }
+    }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton9ActionPerformed
+
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        try {
+            DefaultListModel listmod = (DefaultListModel) JL_Alumnos.getModel();
+            Estudiante tem = (Estudiante) listmod.get(JL_Alumnos.getSelectedIndex());
+            Estudiante temp = null;
+            if (RB_FEstMod.isSelected()) {
+            temp = new Estudiante(TF_NombreEstMod.getText(), TF_ApellidoEstMod.getText(), tem.getCuenta(), Integer.parseInt(FTF_EdadEstMod.getText()), "Femenino", (Carrera) CB_CarreraEstMod.getSelectedItem());    
+            }else if (RB_MEstMod.isSelected()) {
+            temp = new Estudiante(TF_NombreEstMod.getText(), TF_ApellidoEstMod.getText(), tem.getCuenta(), Integer.parseInt(FTF_EdadEstMod.getText()), "Masculino", (Carrera) CB_CarreraEstMod.getSelectedItem());    
+            }
+            listmod.set(JL_Maestros.getSelectedIndex(), temp);
+            JOptionPane.showMessageDialog(null, "Modificado Exitoso");
+        } catch (Exception e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Algo Ha Salido Mal");
+        }
+    }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+        try {
+            DefaultListModel listmodel = (DefaultListModel) JL_Clases.getModel();
+            Clase temp = (Clase) listmodel.get(JL_Clases.getSelectedIndex());
+            temp.setNombre(TF_NombreclaMod.getText());
+            temp.setSeccion(Integer.parseInt(FTF_SeccionMod.getText()));
+            temp.setEdificio(Integer.parseInt(FTF_EdificioMod.getText()));
+            temp.setAACC(CheckAireMod.isSelected());
+            listmodel.set(JL_Clases.getSelectedIndex(), temp);
+            TF_NombreclaMod.setText("");
+            FTF_SeccionMod.setText("");
+            FTF_EdificioMod.setText("");
+            CheckAireMod.setSelected(false);
+            JOptionPane.showMessageDialog(null, "Modificado exitodo");
+        } catch (Exception e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Algo ha salido mal");
+        }
+    }//GEN-LAST:event_jButton12ActionPerformed
+
+    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+        try {
+            DefaultListModel listmod = (DefaultListModel) JL_Carreras.getModel();
+            Carrera temp = (Carrera) listmod.get(JL_Carreras.getSelectedIndex());
+            temp = new Carrera(temp.getFacultad(), Integer.parseInt(FTF_PrecioCarMod.getText()), TF_JefeCarMod.getText());
+            listmod.set(JL_Carreras.getSelectedIndex(), temp);
+            JOptionPane.showMessageDialog(null, "Modificado Exitoso");
+        } catch (Exception e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Algo ha salido mal");
+        }
+    }//GEN-LAST:event_jButton13ActionPerformed
+
+    private void TF_ApellidoEstModActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TF_ApellidoEstModActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TF_ApellidoEstModActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        try {
+            if (JL_Alumnos.getSelectedIndex() >= 0) {
+                DefaultTreeModel Treemodel = (DefaultTreeModel) JTr_Carrera.getModel();
+                DefaultMutableTreeNode root = (DefaultMutableTreeNode) Treemodel.getRoot();
+                DefaultListModel Listmodel = (DefaultListModel) JL_Alumnos.getModel();
+                Estudiante temp = (Estudiante) Listmodel.get(JL_Alumnos.getSelectedIndex());
+                String Carrera = temp.getCarera().toString();
+                String Nombre = temp.getNombre().toString();
+
+                boolean flag = true;
+
+                for (int i = 0; i < root.getChildCount(); i++) {
+                    System.out.println("el mvp cabron lo dicen los stats");
+                    if (root.getChildAt(i).toString().equals(Carrera)) {
+                        System.out.println("entra");
+                        DefaultMutableTreeNode p = new DefaultMutableTreeNode(temp);
+                        ((DefaultMutableTreeNode) root.getChildAt(i)).add(p);
+                        flag = false;
+                    }
+                }
+
+                if (flag == true) {
+                    System.out.println("entra");
+                    DefaultMutableTreeNode n = new DefaultMutableTreeNode(Carrera);
+                    DefaultMutableTreeNode p = new DefaultMutableTreeNode(temp);
+                    n.add(p);
+                    root.add(n);
+                }
+                Treemodel.reload();
+            } else {
+                JOptionPane.showMessageDialog(null, "Elija un Estudiante bad bunny baby");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Algo Ha Salido Mal");
+        }
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void JL_AlumnosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JL_AlumnosMouseClicked
+        try {
+            if (evt.isMetaDown()) {
+                PUM_2Tree.show(evt.getComponent(), evt.getX(), evt.getY());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Algo Ha Salido Mal");
+        }
+    }//GEN-LAST:event_JL_AlumnosMouseClicked
+
+    private void JTr_CarreraMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JTr_CarreraMouseClicked
+        try {
+            if (evt.isMetaDown()) {
+                PUM_EditEst.show(evt.getComponent(), evt.getX(), evt.getY());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Algo Ha Salido Mal");
+        }
+    }//GEN-LAST:event_JTr_CarreraMouseClicked
+
+    private void editestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editestActionPerformed
+        try {
+            EstudianteMod.pack();
+            EstudianteMod.setVisible(true);
+            EstudianteMod.setLocationRelativeTo(null);
+        } catch (Exception e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Algo Ha Salido Mal");
+        }
+    }//GEN-LAST:event_editestActionPerformed
+
+    private void eliminarmaeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminarmaeActionPerformed
+        try {
+            MaestroMod.pack();
+            MaestroMod.setVisible(true);
+            MaestroMod.setLocationRelativeTo(null);
+        } catch (Exception e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Algo Ha Salido Mal");
+        }
+    }//GEN-LAST:event_eliminarmaeActionPerformed
+
+    private void editclaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editclaActionPerformed
+        try {
+            ClaseMod.pack();
+            ClaseMod.setVisible(true);
+            ClaseMod.setLocationRelativeTo(null);
+        } catch (Exception e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Algo Ha Salido Mal");
+        }
+    }//GEN-LAST:event_editclaActionPerformed
+
+    private void eliminarclaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminarclaActionPerformed
+        try {
+            DefaultListModel listmodel = (DefaultListModel) JL_Clases.getModel();
+            listmodel.remove(JL_Alumnos.getSelectedIndex());
+            JOptionPane.showMessageDialog(null, "Clase Eliminada.");
+        } catch (Exception e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Algo ha salido mal.");
+        }
+    }//GEN-LAST:event_eliminarclaActionPerformed
+
+    private void editmaeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editmaeActionPerformed
+        try {
+            DefaultListModel listmodel = (DefaultListModel) JL_Maestros.getModel();
+            listmodel.remove(JL_Maestros.getSelectedIndex());
+            JOptionPane.showMessageDialog(null, "Maestro Eliminado.");
+        } catch (Exception e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Algo ha salido mal.");
+        }
+    }//GEN-LAST:event_editmaeActionPerformed
+
+    private void JL_CarrerasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JL_CarrerasMouseClicked
+        try {
+            if (evt.isMetaDown()) {
+                PUM_EditCar.show(evt.getComponent(), evt.getX(), evt.getY());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Algo Ha Salido Mal");
+        }
+    }//GEN-LAST:event_JL_CarrerasMouseClicked
+
+    private void JL_ClasesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JL_ClasesMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JL_ClasesMouseClicked
+
+    private void JL_MaestrosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JL_MaestrosMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JL_MaestrosMouseClicked
+
+    private void editcla1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editcla1ActionPerformed
+        try {
+            DefaultListModel listmodel = (DefaultListModel) JL_Carreras.getModel();
+            Carrera tempo = (Carrera) listmodel.get(JL_Carreras.getSelectedIndex());
+            tempo.setFacultad(tempo.getFacultad());
+            tempo.setCosto(Integer.parseInt(FTF_PrecioCarMod.getText()));
+            tempo.setJefe(TF_JefeCarMod.getText());
+            JOptionPane.showMessageDialog(null, "Carrera Eliminado.");
+        } catch (Exception e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Algo ha salido mal.");
+        }
+    }//GEN-LAST:event_editcla1ActionPerformed
+
+    private void eliminarcla1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminarcla1ActionPerformed
+        try {
+            DefaultListModel listmodel = (DefaultListModel) JL_Carreras.getModel();
+            listmodel.remove(JL_Carreras.getSelectedIndex());
+            JOptionPane.showMessageDialog(null, "Carrera Eliminado.");
+        } catch (Exception e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Algo ha salido mal.");
+        }
+    }//GEN-LAST:event_eliminarcla1ActionPerformed
+
+    private void EditEduActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EditEduActionPerformed
+        try {
+            EstudianteMod.pack();
+            EstudianteMod.setVisible(true);
+            EstudianteMod.setLocationRelativeTo(null);
+        } catch (Exception e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Algo ha salido mal.");
+        }
+    }//GEN-LAST:event_EditEduActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -114,7 +1581,7 @@ public class Frame extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if ("Windows".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
@@ -139,18 +1606,173 @@ public class Frame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> CB_CarreraEst;
+    private javax.swing.JComboBox<String> CB_CarreraEstMod;
+    private javax.swing.JComboBox<String> CB_NombreCar;
+    private javax.swing.JPanel Carrera;
+    private javax.swing.JDialog CarreraMod;
+    private javax.swing.JCheckBox CheckAire;
+    private javax.swing.JCheckBox CheckAireMod;
+    private javax.swing.JPanel Clase;
+    private javax.swing.JDialog ClaseMod;
+    private javax.swing.JPanel Csrreras;
+    private javax.swing.JMenuItem DeleteEdu;
+    private javax.swing.JMenuItem EditEdu;
+    private javax.swing.JPanel Estudiante;
+    private javax.swing.JDialog EstudianteMod;
+    private javax.swing.JPanel Estudiantes;
+    private javax.swing.JButton Exit1;
     private javax.swing.JDialog Expediente;
+    private javax.swing.JFormattedTextField FTF_Edad;
+    private javax.swing.JFormattedTextField FTF_EdadEstMod;
+    private javax.swing.JFormattedTextField FTF_EdadMa;
+    private javax.swing.JFormattedTextField FTF_EdadMaMod;
+    private javax.swing.JFormattedTextField FTF_Edificio;
+    private javax.swing.JFormattedTextField FTF_EdificioMod;
+    private javax.swing.JFormattedTextField FTF_PrecioCar;
+    private javax.swing.JFormattedTextField FTF_PrecioCarMod;
+    private javax.swing.JFormattedTextField FTF_SalarioMa2;
+    private javax.swing.JFormattedTextField FTF_SalarioMaMod;
+    private javax.swing.JFormattedTextField FTF_Salon;
+    private javax.swing.JFormattedTextField FTF_SalonMod;
+    private javax.swing.JFormattedTextField FTF_Seccion;
+    private javax.swing.JFormattedTextField FTF_SeccionMod;
     private javax.swing.JLabel Fondo;
     private javax.swing.JLabel Fondo1;
+    private javax.swing.JLabel Fondo10;
+    private javax.swing.JLabel Fondo11;
+    private javax.swing.JLabel Fondo12;
+    private javax.swing.JLabel Fondo13;
+    private javax.swing.JLabel Fondo14;
     private javax.swing.JLabel Fondo2;
+    private javax.swing.JLabel Fondo3;
+    private javax.swing.JLabel Fondo4;
+    private javax.swing.JLabel Fondo5;
+    private javax.swing.JLabel Fondo6;
+    private javax.swing.JLabel Fondo7;
+    private javax.swing.JLabel Fondo9;
+    private javax.swing.JButton JB_AsignarClase;
+    private javax.swing.JButton JB_Back;
+    private javax.swing.JButton JB_Back2;
     private javax.swing.JButton JB_Exit0;
+    private javax.swing.JButton JB_Exit3;
     private javax.swing.JButton JB_Expediente;
+    private javax.swing.JButton JB_Files;
     private javax.swing.JButton JB_Registro;
+    private javax.swing.JButton JB_SaveCarrera;
+    private javax.swing.JButton JB_SaveClase;
+    private javax.swing.JButton JB_SaveEstudiante;
+    private javax.swing.JButton JB_SaveMaestro;
+    private javax.swing.JList<String> JL_Alumnos;
+    private javax.swing.JList<String> JL_Carreras;
+    private javax.swing.JList<String> JL_Clases;
+    private javax.swing.JList<String> JL_ClasesAvaila;
+    private javax.swing.JList<String> JL_ClasesAvailaMod;
+    private javax.swing.JList<String> JL_ClasesMA;
+    private javax.swing.JList<String> JL_ClasesMAMod;
+    private javax.swing.JList<String> JL_Maestros;
+    private javax.swing.JTree JTr_Carrera;
+    private javax.swing.JPanel Maestro;
+    private javax.swing.JDialog MaestroMod;
+    private javax.swing.JPanel Maestros;
+    private javax.swing.JPopupMenu PUM_2Tree;
+    private javax.swing.JPopupMenu PUM_EditCar;
+    private javax.swing.JPopupMenu PUM_EditCla;
+    private javax.swing.JPopupMenu PUM_EditEst;
+    private javax.swing.JPopupMenu PUM_EditMae;
+    private javax.swing.JRadioButton RB_FEst;
+    private javax.swing.JRadioButton RB_FEstMod;
+    private javax.swing.JRadioButton RB_MEst;
+    private javax.swing.JRadioButton RB_MEstMod;
     private javax.swing.JDialog Registro;
+    private javax.swing.ButtonGroup Sexo;
+    private javax.swing.JTextField TF_ApellidoEst;
+    private javax.swing.JTextField TF_ApellidoEstMod;
+    private javax.swing.JTextField TF_ApellidoMae;
+    private javax.swing.JTextField TF_ApellidoMaeMod;
+    private javax.swing.JTextField TF_JefeCar;
+    private javax.swing.JTextField TF_JefeCarMod;
+    private javax.swing.JTextField TF_NombreEst;
+    private javax.swing.JTextField TF_NombreEstMod;
+    private javax.swing.JTextField TF_NombreMae;
+    private javax.swing.JTextField TF_NombreMaeMod;
+    private javax.swing.JTextField TF_Nombrecla;
+    private javax.swing.JTextField TF_NombreclaMod;
+    private javax.swing.JMenuItem editcla;
+    private javax.swing.JMenuItem editcla1;
+    private javax.swing.JMenuItem editest;
+    private javax.swing.JMenuItem editmae;
+    private javax.swing.JMenuItem eliminarcla;
+    private javax.swing.JMenuItem eliminarcla1;
+    private javax.swing.JMenuItem eliminarest;
+    private javax.swing.JMenuItem eliminarmae;
+    private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton12;
+    private javax.swing.JButton jButton13;
+    private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel41;
+    private javax.swing.JLabel jLabel42;
+    private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel44;
+    private javax.swing.JLabel jLabel45;
+    private javax.swing.JLabel jLabel47;
+    private javax.swing.JLabel jLabel48;
+    private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel50;
+    private javax.swing.JLabel jLabel52;
+    private javax.swing.JLabel jLabel54;
+    private javax.swing.JLabel jLabel55;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane10;
+    private javax.swing.JScrollPane jScrollPane11;
+    private javax.swing.JScrollPane jScrollPane12;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane8;
+    private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTabbedPane jTabbedPane3;
     // End of variables declaration//GEN-END:variables
 }

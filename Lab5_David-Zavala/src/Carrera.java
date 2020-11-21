@@ -2,34 +2,24 @@
 class Carrera {
 
     private String Nombre;
-    private String Facultad;
     private int Costo;
     private String Jefe;
 
     public Carrera() {
     }
 
-    public Carrera(String Nombre, String Facultad, int Costo, String Jefe) {
+    public Carrera(String Nombre, int Costo, String Jefe) {
         this.Nombre = Nombre;
-        this.Facultad = Facultad;
         this.Costo = Costo;
         this.Jefe = Jefe;
     }
 
-    public String getNombre() {
+    public String getFacultad() {
         return Nombre;
     }
 
-    public void setNombre(String Nombre) {
-        this.Nombre = Nombre;
-    }
-
-    public String getFacultad() {
-        return Facultad;
-    }
-
     public void setFacultad(String Facultad) {
-        this.Facultad = Facultad;
+        this.Nombre = Facultad;
     }
 
     public int getCosto() {
@@ -48,10 +38,4 @@ class Carrera {
         this.Jefe = Jefe;
     }
 
-    @Override
-    public String toString() {
-        return "Nombre=" + Nombre + ", Facultad=" + Facultad + ", Jefe=" + Jefe;
-    }
-
-    
 }

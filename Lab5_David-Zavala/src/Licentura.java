@@ -1,26 +1,28 @@
-public class Licentura extends Carrera{
- 
-    private String NombreC;
+
+public class Licentura extends Carrera {
+
+    private String Facultad;
 
     public Licentura() {
     }
 
-    public Licentura(String Nombre, String NombreC, String Facultad, int Costo, String Jefe) {
-        super(Nombre, Facultad, Costo, Jefe);
-        this.NombreC = NombreC;
+    public Licentura(String Nombre, String Facultad, int Costo, String Jefe) {
+        super(Nombre, Costo, Jefe);
+        this.Facultad = Facultad;
     }
 
-    public String getNombreC() {
-        return NombreC;
+    public String getFacultad() {
+        return Facultad;
     }
 
-    public void setNombreC(String NombreC) {
-        this.NombreC = NombreC;
+    public void setFacultad(String NombreC) {
+        this.Facultad = Facultad;
     }
 
     @Override
     public String toString() {
-        return "Licentura{" + "NombreC=" + NombreC + '}';
+        return this.getFacultad();
+
     }
-    
+
 }

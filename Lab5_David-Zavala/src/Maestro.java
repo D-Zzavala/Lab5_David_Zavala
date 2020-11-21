@@ -62,7 +62,7 @@ public class Maestro {
 
     @Override
     public String toString() {
-        return "Maestro{" + "Nombre=" + Nombre + ", Apellido=" + Apellido + ", Salario=" + Salario + ", Salon=" + Salon + ", Clases=" + Clases + '}';
+        return Nombre + ", " + Apellido;
     }
     
 }

@@ -1,26 +1,27 @@
 public class Ingenieria extends Carrera{
  
-    private String NombreC;
+    private String Facultad;
 
     public Ingenieria() {
     }
 
-    public Ingenieria(String Nombre, String NombreC, String Facultad, int Costo, String Jefe) {
-        super(Nombre, Facultad, Costo, Jefe);
-        this.NombreC = NombreC;
+    public Ingenieria(String Nombre, String Facultad, int Costo, String Jefe) {
+        super(Nombre, Costo, Jefe);
+        this.Facultad = Facultad;
     }
 
     public String getNombreC() {
-        return NombreC;
+        return Facultad;
     }
 
     public void setNombreC(String NombreC) {
-        this.NombreC = NombreC;
+        this.Facultad = Facultad;
     }
 
     @Override
     public String toString() {
-        return "Licentura{" + "NombreC=" + NombreC + '}';
+                return this.getFacultad();
+
     }
     
 }

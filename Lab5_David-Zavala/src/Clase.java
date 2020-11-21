@@ -49,7 +49,7 @@ class Clase {
 
     @Override
     public String toString() {
-        return "Clase{" + "Nombre=" + Nombre + ", Seccion=" + Seccion + ", Edificio=" + Edificio + ", AACC=" + AACC + '}';
+        return Nombre + ", Seccion:" + Seccion;
     }
     
     
